@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Migos Tires | Milwaukee Tire Shop</title>
+  <meta name="description" content="Migos Tires in Milwaukee, WI. New tires, used tires, installation, balancing, tire repair, rotation, TPMS help, and trusted tire service." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #030304;
+      --black-2: #070708;
+      --black-3: #101014;
+      --white: #ffffff;
+      --off-white: #ededf0;
+      --muted: #a7a7b0;
+      --red: #df151e;
+      --red-hot: #ff2630;
+      --red-dark: #89070d;
+      --line: rgba(255,255,255,.14);
+      --line-dark: rgba(0,0,0,.14);
+      --container: 1200px;
+      --shadow: 0 35px 95px rgba(0,0,0,.65);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--black);
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 72px));
+      margin: 0 auto;
+    }
+
+    .texture {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      opacity: .07;
+      mix-blend-mode: overlay;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255,255,255,.72) 0 1px, transparent 1px),
+        radial-gradient(circle at 72% 74%, rgba(255,255,255,.48) 0 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 52px 52px, 76px 76px, 42px 42px, 42px 42px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* =============================
+       BRAND / LOGO SYSTEM
+       ============================= */
+
+    .brand-logo {
+      display: inline-flex;
+      flex-direction: column;
+      line-height: .73;
+      transform: skew(-9deg);
+      filter: drop-shadow(7px 8px 0 rgba(0,0,0,.78)) drop-shadow(0 18px 24px rgba(0,0,0,.55));
+      user-select: none;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo__top {
+      display: flex;
+      align-items: center;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(3.1rem, 8vw, 7.9rem);
+      letter-spacing: -.05em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: linear-gradient(180deg, #ff353e 0%, #e01821 46%, #8b060c 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow:
+        1.35px 1.35px 0 rgba(255,255,255,.92),
+        0 0 28px rgba(255,0,0,.2);
+    }
+
+    .brand-logo__bottom {
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 5rem);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-shadow: 4px 5px 0 rgba(0,0,0,.78);
+      padding-left: .025em;
+    }
+
+    .brand-logo--small .brand-logo__top {
+      font-size: 2.75rem;
+    }
+
+    .brand-logo--small .brand-logo__bottom {
+      font-size: 1.82rem;
+    }
+
+    .brand-logo--footer .brand-logo__top {
+      font-size: clamp(3.9rem, 7vw, 6.2rem);
+    }
+
+    .brand-logo--footer .brand-logo__bottom {
+      font-size: clamp(2.55rem, 4.5vw, 4rem);
+    }
+
+    .brand-logo__o {
+      width: .72em;
+      height: .72em;
+      display: inline-block;
+      position: relative;
+      border-radius: 50%;
+      transform: skew(9deg) translateY(.035em);
+      margin: 0 .01em;
+      background:
+        radial-gradient(circle at center, #070708 0 18%, #2d2d35 19% 25%, #070708 26% 38%, transparent 39%),
+        repeating-conic-gradient(from 7deg, #050506 0deg 7deg, #474750 7deg 11deg, #080809 11deg 19deg),
+        radial-gradient(circle at center, #15151a 0 48%, #050506 49% 57%, #33333b 58% 64%, #030304 65% 100%);
+      border: .075em solid #050506;
+      box-shadow:
+        inset 0 0 0 .045em #3a3a42,
+        inset 0 0 0 .13em #050506,
+        0 0 0 .025em rgba(255,255,255,.24),
+        4px 5px 0 rgba(0,0,0,.62);
+    }
+
+    .brand-logo__o::before {
+      content: "";
+      position: absolute;
+      inset: -.09em;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(from 12deg, #17171a 0deg 5deg, #050506 5deg 12deg, #34343b 12deg 16deg, #050506 16deg 23deg);
+      -webkit-mask: radial-gradient(circle, transparent 0 63%, #000 64% 100%);
+      mask: radial-gradient(circle, transparent 0 63%, #000 64% 100%);
+    }
+
+    /* =============================
+       HEADER
+       ============================= */
+
+    .site-header {
+      height: 104px;
+      background: rgba(3,3,4,.92);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+    }
+
+    .main-nav a {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 1.04rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.86);
+      position: relative;
+      transition: color .2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: var(--red-hot);
+    }
+
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      width: 46px;
+      height: 3px;
+      background: var(--red);
+      transform: skew(-22deg);
+    }
+
+    .header-call {
+      height: 60px;
+      min-width: 184px;
+      background: linear-gradient(180deg, #ff2b35, #cf1018);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: skew(-12deg);
+      box-shadow: 0 16px 34px rgba(224,24,33,.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-call::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      transform: translateX(-120%);
+      transition: transform .45s ease;
+    }
+
+    .header-call:hover::before {
+      transform: translateX(120%);
+    }
+
+    .header-call > span {
+      transform: skew(12deg);
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      line-height: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .call-icon {
+      font-size: 1.2rem;
+    }
+
+    .call-copy {
+      display: flex;
+      flex-direction: column;
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .call-copy b {
+      font-size: 1.35rem;
+    }
+
+    .call-copy small {
+      font-size: .92rem;
+      margin-top: 4px;
+    }
+
+    .mobile-menu {
+      display: none;
+      width: 48px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.05);
+      color: #fff;
+      transform: skew(-12deg);
+    }
+
+    .mobile-menu span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      margin: 5px auto;
+      transform: skew(12deg);
+    }
+
+    /* =============================
+       HERO
+       ============================= */
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 78% 48%, rgba(224,24,33,.20), transparent 24%),
+        linear-gradient(90deg, #030304 0%, #030304 53%, #09090b 100%);
+      border-bottom: 4px solid var(--red);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 56%;
+      height: 100%;
+      background:
+        linear-gradient(115deg, transparent 0 30%, rgba(255,255,255,.035) 30.2% 31%, transparent 31.2%),
+        linear-gradient(150deg, transparent 0 58%, rgba(255,255,255,.03) 58.2% 59%, transparent 59.2%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.018) 0 1px, transparent 1px 18px);
+      opacity: .88;
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "MIGOS";
+      position: absolute;
+      right: -1.2vw;
+      bottom: -7.4vw;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: clamp(9rem, 26vw, 24rem);
+      letter-spacing: -.07em;
+      color: rgba(255,255,255,.027);
+      z-index: -1;
+      transform: skew(-10deg);
+    }
+
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      min-height: 720px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 5;
+      padding: 56px 0 72px;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      color: var(--red-hot);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 55px;
+      height: 3px;
+      background: var(--red);
+      transform: skew(-24deg);
+    }
+
+    .hero .brand-logo {
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      max-width: 620px;
+      margin-top: 24px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(3.4rem, 7.4vw, 6.6rem);
+      line-height: .82;
+      letter-spacing: -.045em;
+      text-transform: uppercase;
+      transform: skew(-6deg);
+      text-shadow: 7px 9px 0 rgba(0,0,0,.7);
+    }
+
+    .hero-title span {
+      color: var(--red-hot);
+    }
+
+    .hero-subtitle {
+      max-width: 560px;
+      margin: 26px 0 34px;
+      color: rgba(255,255,255,.74);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 62px;
+      min-width: 194px;
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,.88);
+      transform: skew(-12deg);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.28rem;
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    .btn span {
+      transform: skew(12deg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+      transform: translateX(-120%);
+      transition: transform .45s ease;
+    }
+
+    .btn:hover::before {
+      transform: translateX(120%);
+    }
+
+    .btn:hover {
+      transform: skew(-12deg) translateY(-3px);
+    }
+
+    .btn-red {
+      background: linear-gradient(180deg, #ff2d37, #cf1018);
+      border-color: #e01922;
+      box-shadow: 0 16px 38px rgba(224,24,33,.28);
+    }
+
+    .hero-art {
+      position: relative;
+      min-height: 620px;
+      z-index: 3;
+    }
+
+    .red-streaks {
+      position: absolute;
+      left: -190px;
+      top: 310px;
+      width: 570px;
+      height: 240px;
+      z-index: 1;
+      opacity: .92;
+      transform: skew(-18deg);
+      pointer-events: none;
+    }
+
+    .red-streaks span {
+      position: absolute;
+      right: 0;
+      display: block;
+      height: 16px;
+      background: linear-gradient(90deg, transparent, var(--red-hot), var(--red), transparent);
+      box-shadow: 0 0 24px rgba(224,24,33,.55);
+      filter: blur(.15px);
+    }
+
+    .red-streaks span:nth-child(1) { top: 12px; width: 380px; right: 35px; }
+    .red-streaks span:nth-child(2) { top: 58px; width: 560px; right: 0; }
+    .red-streaks span:nth-child(3) { top: 105px; width: 430px; right: 58px; }
+    .red-streaks span:nth-child(4) { top: 152px; width: 310px; right: 145px; }
+
+    .tire-wrap {
+      position: absolute;
+      right: -90px;
+      top: 38px;
+      width: min(575px, 46vw);
+      aspect-ratio: 1;
+      z-index: 5;
+      filter: drop-shadow(-25px 26px 38px rgba(0,0,0,.74));
+      animation: tireFloat 7s ease-in-out infinite;
+    }
+
+    @keyframes tireFloat {
+      0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+
+    .tire {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, #050506 0 14%, #2a2a30 15% 20%, #09090b 21% 30%, transparent 31%),
+        repeating-conic-gradient(from 6deg, #050506 0deg 7deg, #3e3e46 7deg 11deg, #080809 11deg 19deg),
+        radial-gradient(circle at center, #141419 0 46%, #050506 47% 56%, #33333b 57% 63%, #050506 64% 100%);
+      border: clamp(28px, 4vw, 46px) solid #040405;
+      box-shadow:
+        inset 0 0 0 18px #17171c,
+        inset 0 0 0 43px #050506,
+        inset 0 0 95px rgba(255,255,255,.13),
+        0 0 0 1px rgba(255,255,255,.12);
+    }
+
+    .tire::before {
+      content: "";
+      position: absolute;
+      inset: -7%;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(from 11deg, #17171a 0deg 5deg, #050506 5deg 12deg, #383840 12deg 16deg, #050506 16deg 23deg);
+      -webkit-mask: radial-gradient(circle, transparent 0 62%, #000 63% 100%);
+      mask: radial-gradient(circle, transparent 0 62%, #000 63% 100%);
+    }
+
+    .tire::after {
+      content: "";
+      position: absolute;
+      inset: 38%;
+      border-radius: 50%;
+      background: radial-gradient(circle, #27272e, #050506 72%);
+      box-shadow:
+        0 0 0 13px rgba(255,255,255,.04),
+        0 0 0 1px rgba(255,255,255,.13);
+    }
+
+    .rim {
+      position: absolute;
+      inset: 24%;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(from 0deg, transparent 0deg 18deg, rgba(255,255,255,.18) 18deg 22deg, transparent 22deg 45deg);
+      -webkit-mask: radial-gradient(circle, transparent 0 35%, #000 36% 78%, transparent 79% 100%);
+      mask: radial-gradient(circle, transparent 0 35%, #000 36% 78%, transparent 79% 100%);
+      opacity: .75;
+    }
+
+    /* =============================
+       QUICK SERVICE STRIP
+       ============================= */
+
+    .quick-strip {
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.04), transparent 18%, rgba(255,255,255,.035) 70%, transparent),
+        #0a0a0b;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .quick-grid {
+      min-height: 260px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: stretch;
+    }
+
+    .quick-card {
+      position: relative;
+      padding: 34px 30px 28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 240px;
+    }
+
+    .quick-card:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 34px;
+      width: 1px;
+      height: 188px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.28), transparent);
+    }
+
+    .quick-icon {
+      width: 78px;
+      height: 78px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .quick-icon--tire {
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, #0a0a0b 0 23%, #fff 24% 31%, #0a0a0b 32% 48%, #fff 49% 56%, #0a0a0b 57% 100%);
+      border: 8px solid #fff;
+      box-shadow: 0 0 0 3px rgba(224,24,33,.55);
+    }
+
+    .quick-icon--wrench::before,
+    .quick-icon--repair::before,
+    .quick-icon--balance::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 70px;
+      height: 16px;
+      background: #fff;
+      border-radius: 10px;
+      transform: translate(-50%,-50%) rotate(-34deg);
+      box-shadow: 0 0 0 3px rgba(224,24,33,.34);
+    }
+
+    .quick-icon--wrench::after {
+      content: "";
+      position: absolute;
+      right: 4px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      border: 8px solid #fff;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      transform: rotate(-34deg);
+    }
+
+    .quick-icon--repair::after {
+      content: "+";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--red);
+      font-size: 56px;
+      font-weight: 900;
+    }
+
+    .quick-icon--balance::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 9px;
+      width: 40px;
+      height: 56px;
+      border: 8px solid #fff;
+      border-top: 0;
+      border-radius: 0 0 28px 28px;
+      transform: rotate(16deg);
+    }
+
+    .quick-card h3 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.7rem;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: .03em;
+      margin-bottom: 14px;
+      text-shadow: 3px 4px 0 rgba(0,0,0,.55);
+    }
+
+    .mini-line {
+      width: 48px;
+      height: 3px;
+      background: var(--red);
+      margin-bottom: 17px;
+      transform: skew(-25deg);
+    }
+
+    .quick-card p {
+      color: #e4e4e7;
+      font-size: 1.02rem;
+      line-height: 1.38;
+      max-width: 176px;
+    }
+
+    /* =============================
+       BRANDS
+       ============================= */
+
+    .brands-section {
+      min-height: 300px;
+      padding: 44px 0 38px;
+      background:
+        linear-gradient(rgba(0,0,0,.84), rgba(0,0,0,.92)),
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.10), transparent 18%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 1px, transparent 1px 18px),
+        #09090b;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .section-kicker {
+      font-family: "Barlow Condensed", sans-serif;
+      color: var(--red-hot);
+      font-size: 1.55rem;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .section-title-row h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-size: clamp(2.2rem, 4vw, 3.05rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .045em;
+      line-height: 1;
+      text-shadow: 4px 6px 0 rgba(0,0,0,.7);
+    }
+
+    .speed-lines {
+      width: 78px;
+      height: 18px;
+      position: relative;
+      display: inline-block;
+      flex: 0 0 auto;
+    }
+
+    .speed-lines::before,
+    .speed-lines::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: var(--red);
+      transform: skew(-25deg);
+    }
+
+    .speed-lines--left::before { top: 2px; right: 0; width: 62px; }
+    .speed-lines--left::after { bottom: 1px; right: 0; width: 88px; }
+    .speed-lines--right::before { top: 2px; left: 0; width: 62px; }
+    .speed-lines--right::after { bottom: 1px; left: 0; width: 88px; }
+
+    .brand-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      gap: 0;
+      margin-bottom: 36px;
+    }
+
+    .brand-name {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-right: 1px solid rgba(255,255,255,.22);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.95rem;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .035em;
+      text-shadow: 3px 4px 0 rgba(0,0,0,.6);
+    }
+
+    .brand-name:last-child {
+      border-right: 0;
+    }
+
+    .brand-name--long {
+      font-size: 1.75rem;
+    }
+
+    .btn-thin {
+      height: 48px;
+      min-width: 220px;
+      border: 2px solid var(--red);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transform: skew(-12deg);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      transition: background .25s ease, transform .25s ease;
+    }
+
+    .btn-thin span {
+      transform: skew(12deg);
+    }
+
+    .btn-thin:hover {
+      background: var(--red);
+      transform: skew(-12deg) translateY(-3px);
+    }
+
+    /* =============================
+       ABOUT / STATS
+       ============================= */
+
+    .about-section {
+      min-height: 360px;
+      padding: 55px 0 52px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(0,0,0,.74), rgba(0,0,0,.88)),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 1px, transparent 1px 18px),
+        #0a0a0c;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .about-section::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      bottom: -110px;
+      width: 420px;
+      height: 420px;
+      border: 45px solid rgba(255,255,255,.035);
+      border-radius: 50%;
+      transform: rotate(-20deg);
+    }
+
+    .about-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.05fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-kicker {
+      color: var(--red-hot);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-bottom: 12px;
+    }
+
+    .about-copy h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2.6rem, 4.2vw, 3.3rem);
+      font-style: italic;
+      font-weight: 900;
+      line-height: 1.02;
+      text-transform: uppercase;
+      letter-spacing: .035em;
+      margin-bottom: 19px;
+      text-shadow: 4px 5px 0 rgba(0,0,0,.62);
+    }
+
+    .about-copy p {
+      color: #e4e4e7;
+      max-width: 445px;
+      font-size: 1.05rem;
+      line-height: 1.62;
+      margin-bottom: 24px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-left: 1px solid rgba(255,255,255,.18);
+      min-height: 232px;
+    }
+
+    .stat-card {
+      min-height: 116px;
+      padding: 24px 40px;
+      border-right: 1px solid rgba(255,255,255,.18);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .stat-card:nth-child(2),
+    .stat-card:nth-child(4) {
+      border-right: 0;
+    }
+
+    .stat-card:nth-child(3),
+    .stat-card:nth-child(4) {
+      border-bottom: 0;
+    }
+
+    .stat-card b {
+      display: block;
+      color: var(--red-hot);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 3.3rem;
+      line-height: .95;
+      font-style: italic;
+      font-weight: 900;
+    }
+
+    .stat-card span {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.32rem;
+      font-style: italic;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .stars {
+      color: var(--red-hot);
+      letter-spacing: .18em;
+      font-size: 1.4rem;
+      margin-top: 10px;
+    }
+
+    /* =============================
+       CONTACT CTA
+       ============================= */
+
+    .contact-cta {
+      padding: 72px 0;
+      background:
+        radial-gradient(circle at 72% 46%, rgba(224,24,33,.15), transparent 22%),
+        #050506;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 44px;
+      align-items: center;
+      padding: 40px 42px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.015)),
+        #0b0b0d;
+      border: 1px solid var(--line);
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 46px), calc(100% - 46px) 100%, 0 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel h2 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+      line-height: .86;
+      text-transform: uppercase;
+      transform: skew(-5deg);
+      text-shadow: 5px 7px 0 rgba(0,0,0,.7);
+    }
+
+    .contact-panel h2 span {
+      color: var(--red-hot);
+    }
+
+    .contact-panel p {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      padding: 16px 18px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--red-hot);
+      font-family: "Barlow Condensed", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    /* =============================
+       FOOTER
+       ============================= */
+
+    .footer {
+      padding: 50px 0 22px;
+      background:
+        linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.95)),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 1px, transparent 1px 18px),
+        #070708;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.45fr .7fr 1fr .9fr;
+      gap: 44px;
+      padding-bottom: 38px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .footer h3 {
+      color: var(--red-hot);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 19px;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #eeeef1;
+    }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .social {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.75);
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      transition: background .25s ease, transform .25s ease;
+    }
+
+    .social:hover {
+      background: var(--red);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      padding-top: 18px;
+      text-align: center;
+      color: #cfcfd5;
+      font-size: .95rem;
+    }
+
+    /* =============================
+       RESPONSIVE
+       ============================= */
+
+    @media (max-width: 1080px) {
+      .container {
+        width: min(var(--container), calc(100% - 36px));
+      }
+
+      .site-header {
+        height: 90px;
+      }
+
+      .brand-logo--small .brand-logo__top {
+        font-size: 2.2rem;
+      }
+
+      .brand-logo--small .brand-logo__bottom {
+        font-size: 1.45rem;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .header-call {
+        height: 54px;
+        min-width: 158px;
+      }
+
+      .call-copy b {
+        font-size: 1.12rem;
+      }
+
+      .call-copy small {
+        font-size: .78rem;
+      }
+
+      .hero {
+        min-height: 860px;
+        align-items: flex-start;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: 860px;
+      }
+
+      .hero-copy {
+        padding-top: 70px;
+        max-width: 760px;
+      }
+
+      .hero-art {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .tire-wrap {
+        width: 540px;
+        max-width: none;
+        right: -125px;
+        top: 380px;
+        opacity: .9;
+      }
+
+      .red-streaks {
+        left: auto;
+        right: 70px;
+        top: 500px;
+        width: 500px;
+        opacity: .72;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-card:nth-child(2)::after {
+        display: none;
+      }
+
+      .brand-row {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 25px;
+      }
+
+      .brand-name:nth-child(3) {
+        border-right: 0;
+      }
+
+      .about-grid,
+      .contact-panel,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(var(--container), calc(100% - 26px));
+      }
+
+      .site-header {
+        height: 78px;
+      }
+
+      .header-call {
+        display: none;
+      }
+
+      .brand-logo--small .brand-logo__top {
+        font-size: 1.9rem;
+      }
+
+      .brand-logo--small .brand-logo__bottom {
+        font-size: 1.25rem;
+      }
+
+      .hero {
+        min-height: 830px;
+      }
+
+      .hero-copy {
+        padding-top: 46px;
+      }
+
+      .hero .brand-logo {
+        margin-bottom: 18px;
+      }
+
+      .hero-title {
+        font-size: 3.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        margin: 22px 0 26px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 270px;
+        min-height: 58px;
+        font-size: 1.15rem;
+      }
+
+      .tire-wrap {
+        width: 500px;
+        right: -218px;
+        top: 455px;
+      }
+
+      .red-streaks {
+        right: -90px;
+        top: 535px;
+        width: 430px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-card {
+        min-height: 220px;
+      }
+
+      .quick-card::after {
+        display: none !important;
+      }
+
+      .section-title-row {
+        gap: 10px;
+      }
+
+      .section-title-row h2 {
+        font-size: 2.05rem;
+      }
+
+      .speed-lines {
+        display: none;
+      }
+
+      .brand-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .brand-name {
+        font-size: 1.55rem;
+        border-right: 0;
+      }
+
+      .brand-name:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,.18);
+      }
+
+      .about-copy h2 {
+        font-size: 2.35rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-card {
+        border-right: 0 !important;
+      }
+
+      .stat-card:nth-child(3) {
+        border-bottom: 1px solid rgba(255,255,255,.14);
+      }
+
+      .contact-panel {
+        padding: 32px 22px;
+      }
+
+      .brand-logo--footer .brand-logo__top {
+        font-size: 3.6rem;
+      }
+
+      .brand-logo--footer .brand-logo__bottom {
+        font-size: 2.35rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="texture" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo brand-logo--small" aria-label="Migos Tires home">
+        <span class="brand-logo__top">MIG<span class="brand-logo__o"></span>S</span>
+        <span class="brand-logo__bottom">TIRES</span>
+      </a>
+
+      <div class="nav-wrap">
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#top">Home</a>
+          <a href="#services">Tires</a>
+          <a href="#services">Services</a>
+          <a href="#brands">Brands</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="header-call" href="tel:4148282178">
+          <span>
+            <span class="call-icon">☎</span>
+            <span class="call-copy">
+              <b>Call Now</b>
+              <small>414-828-2178</small>
+            </span>
+          </span>
+        </a>
+
+        <button class="mobile-menu" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-kicker">Milwaukee Tire Specialists</div>
+
+          <div class="brand-logo" aria-label="Migos Tires logo">
+            <span class="brand-logo__top">MIG<span class="brand-logo__o"></span>S</span>
+            <span class="brand-logo__bottom">TIRES</span>
+          </div>
+
+          <h1 class="hero-title">Quality tires. Fast service. <span>Honest prices.</span></h1>
+
+          <p class="hero-subtitle">
+            New tires, used tires, installation, balancing, rotation, TPMS help, and flat tire repair for Milwaukee drivers who want reliable service without the runaround.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#services"><span>◎ Shop Tires</span></a>
+            <a class="btn" href="#contact"><span>● Our Location</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="red-streaks">
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="tire-wrap">
+            <div class="tire">
+              <div class="rim"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-strip" id="services">
+      <div class="container">
+        <div class="quick-grid">
+          <article class="quick-card">
+            <div class="quick-icon quick-icon--tire"></div>
+            <h3>New & Used Tires</h3>
+            <div class="mini-line"></div>
+            <p>Top brands. All sizes. The right tire for every ride.</p>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon quick-icon--wrench"></div>
+            <h3>Installation</h3>
+            <div class="mini-line"></div>
+            <p>Mounted and balanced with precision and care.</p>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon quick-icon--repair"></div>
+            <h3>Tire Repair</h3>
+            <div class="mini-line"></div>
+            <p>Punctures, plugs, patches and more. We get you rolling.</p>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon quick-icon--balance"></div>
+            <h3>Balancing</h3>
+            <div class="mini-line"></div>
+            <p>Smooth ride. Better handling. Longer tire life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-section" id="brands">
+      <div class="container">
+        <div class="section-kicker">Top Brands</div>
+
+        <div class="section-title-row">
+          <span class="speed-lines speed-lines--left"></span>
+          <h2>The Brands You Trust</h2>
+          <span class="speed-lines speed-lines--right"></span>
+        </div>
+
+        <div class="brand-row">
+          <div class="brand-name">Michelin</div>
+          <div class="brand-name">BFGoodrich</div>
+          <div class="brand-name">Pirelli</div>
+          <div class="brand-name brand-name--long">Continental</div>
+          <div class="brand-name">Toyo Tires</div>
+          <div class="brand-name">Hankook</div>
+        </div>
+
+        <a href="#contact" class="btn-thin"><span>View All Brands</span></a>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="about-kicker">About Migos Tires</div>
+          <h2>Built on Quality.<br>Driven by Trust.</h2>
+          <div class="mini-line"></div>
+          <p>
+            Migos Tires is built around simple values: quality tire options, quick service, honest recommendations, and dependable work for Milwaukee drivers.
+          </p>
+          <a href="#contact" class="learn"><span>Learn More About Us</span></a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <b>1000+</b>
+            <span>Satisfied Customers</span>
+          </div>
+          <div class="stat-card">
+            <b>10+</b>
+            <span>Years in Business</span>
+          </div>
+          <div class="stat-card">
+            <b>100%</b>
+            <span>Quality Service</span>
+          </div>
+          <div class="stat-card">
+            <b>5</b>
+            <span>Star Reviews</span>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <h2>Need tires <span>today?</span></h2>
+            <p>
+              No quote form. No complicated process. Call Migos Tires for new and used tires, installation, balancing, rotation, TPMS help, and flat tire repair in Milwaukee.
+            </p>
+            <div class="hero-actions" style="position: static; margin-top: 28px;">
+              <a class="btn btn-red" href="tel:4148282178"><span>☎ Call Now</span></a>
+            </div>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <small>Primary Phone</small>
+              <strong><a href="tel:4148282178">414-828-2178</a></strong>
+            </div>
+            <div class="contact-item">
+              <small>Additional Phones</small>
+              <strong>414-628-1320 • 414-292-7597</strong>
+            </div>
+            <div class="contact-item">
+              <small>Location</small>
+              <strong>Milwaukee, Wisconsin</strong>
+            </div>
+            <div class="contact-item">
+              <small>Hours</small>
+              <strong>Mon - Sat: 8AM - 6PM • Sunday: Closed</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-logo brand-logo--footer" aria-label="Migos Tires logo">
+          <span class="brand-logo__top">MIG<span class="brand-logo__o"></span>S</span>
+          <span class="brand-logo__bottom">TIRES</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Tires</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <ul>
+          <li>☎ 414-828-2178</li>
+          <li>☎ 414-628-1320</li>
+          <li>☎ 414-292-7597</li>
+          <li>● Milwaukee, WI</li>
+          <li>◴ Mon - Sat: 8AM - 6PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+        <div class="socials">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Instagram">◎</a>
+          <a class="social" href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">© 2026 Migos Tires. All Rights Reserved.</div>
+  </footer>
+</body>
+</html>

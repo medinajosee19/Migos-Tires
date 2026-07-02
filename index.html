@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Migos Tires | Milwaukee Tire Shop</title>
+  <meta name="description" content="Migos Tires in Milwaukee, WI. New and used tires, installation, tire repair, balancing, and trusted tire service." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red:#e01821;
+      --red2:#ff2630;
+      --black:#030304;
+      --white:#ffffff;
+      --container:1135px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:#030304;color:#fff;font-family:"Oswald",Arial,sans-serif;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--container), calc(100% - 72px));margin:0 auto}
+    .site{max-width:1280px;margin:0 auto;background:#030304;box-shadow:0 0 80px rgba(0,0,0,.75);overflow:hidden}
+
+    .header{height:115px;position:relative;z-index:10;background:#030304;border-bottom:1px solid rgba(255,255,255,.07)}
+    .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo-header{width:292px;margin-left:-10px;transform:translateY(1px)}
+    .nav-wrap{display:flex;align-items:center;gap:33px;height:100%}
+    .nav{display:flex;align-items:center;gap:34px;height:100%}
+    .nav a{font-family:"Barlow Condensed",sans-serif;font-size:17px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#fff;position:relative;padding-top:3px;line-height:1;transition:.2s ease}
+    .nav a.active,.nav a:hover{color:var(--red2)}
+    .nav a.active::after{content:"";position:absolute;left:0;bottom:-24px;width:48px;height:3px;background:var(--red)}
+    .call-box{height:64px;min-width:190px;background:linear-gradient(180deg,#ef1f29,#cf1018);display:flex;align-items:center;justify-content:center;gap:12px;transform:skew(-12deg);box-shadow:0 15px 35px rgba(224,24,33,.33);margin-right:2px}
+    .call-box>span{transform:skew(12deg);display:flex;align-items:center;gap:11px}
+    .phone-icon{font-size:18px}
+    .call-text{display:flex;flex-direction:column;line-height:1;font-family:"Barlow Condensed",sans-serif;font-style:italic;text-transform:uppercase;font-weight:900;letter-spacing:.06em}
+    .call-text b{font-size:23px}.call-text small{font-size:15px;margin-top:4px}
+
+    .hero{height:632px;position:relative;background:radial-gradient(circle at 76% 50%,rgba(224,24,33,.16),transparent 25%),linear-gradient(90deg,#030304 0%,#030304 49%,#09090b 100%);overflow:hidden;border-bottom:4px solid var(--red)}
+    .hero::after{content:"";position:absolute;right:330px;top:215px;width:520px;height:315px;background:url("assets/red-streaks.png") center/contain no-repeat;opacity:.96;pointer-events:none}
+    .hero-inner{height:100%;position:relative}
+    .hero-logo{position:absolute;left:38px;top:72px;width:604px;z-index:3}
+    .hero-tire{position:absolute;right:-52px;top:52px;width:545px;z-index:4;filter:drop-shadow(-25px 18px 38px rgba(0,0,0,.72))}
+    .hero-tagline{position:absolute;left:40px;top:366px;font-family:"Barlow Condensed",sans-serif;font-size:38px;font-weight:800;font-style:italic;letter-spacing:.035em;line-height:1.18;text-transform:uppercase;color:#fff;text-shadow:3px 5px 0 rgba(0,0,0,.65);z-index:5}
+    .hero-actions{position:absolute;left:38px;top:493px;display:flex;gap:30px;z-index:6}
+    .btn{height:64px;min-width:194px;border:2px solid rgba(255,255,255,.86);transform:skew(-12deg);display:inline-flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;font-size:21px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transition:.25s ease}
+    .btn span{transform:skew(12deg);display:flex;align-items:center;gap:14px}
+    .btn-red{background:linear-gradient(180deg,#f0252e,#cf1018);border-color:#e01922;box-shadow:0 16px 38px rgba(224,24,33,.28)}
+    .btn-outline{background:rgba(0,0,0,.22)}
+    .btn:hover{transform:skew(-12deg) translateY(-3px);box-shadow:0 20px 42px rgba(224,24,33,.35)}
+    .tiny-icon{font-size:18px}
+
+    .services-row{background:linear-gradient(90deg,rgba(255,255,255,.05),transparent 18%,rgba(255,255,255,.04) 70%,transparent),#0a0a0b;min-height:275px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);min-height:275px;align-items:center}
+    .service{min-height:215px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:30px 34px 20px;position:relative}
+    .service:not(:last-child)::after{content:"";position:absolute;right:0;top:36px;width:1px;height:190px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.28),transparent)}
+    .service img{height:74px;width:auto;object-fit:contain;margin-bottom:23px}
+    .service h3{font-family:"Barlow Condensed",sans-serif;font-size:27px;font-style:italic;font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.03em;margin-bottom:14px;text-shadow:3px 4px 0 rgba(0,0,0,.55)}
+    .service .mini-line{width:48px;height:3px;background:var(--red);margin-bottom:17px}
+    .service p{color:#e4e4e7;font-size:17px;line-height:1.35;max-width:168px;font-weight:400}
+
+    .brands{min-height:287px;background:linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.9)),url("assets/dark-texture.jpg") center/cover no-repeat;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;text-align:center;padding:36px 0 33px}
+    .brands-kicker{font-family:"Barlow Condensed",sans-serif;color:var(--red2);font-style:italic;font-size:25px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+    .brands h2{font-family:"Barlow Condensed",sans-serif;font-style:italic;font-size:46px;font-weight:900;text-transform:uppercase;letter-spacing:.045em;line-height:1;margin-bottom:40px;text-shadow:4px 6px 0 rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;gap:22px}
+    .speed-lines{width:78px;height:18px;position:relative;display:inline-block}
+    .speed-lines::before,.speed-lines::after{content:"";position:absolute;height:3px;background:var(--red);right:0;transform:skew(-25deg)}
+    .speed-lines.left::before{top:2px;width:62px}.speed-lines.left::after{bottom:1px;width:88px}
+    .speed-lines.right::before{top:2px;left:0;right:auto;width:62px}.speed-lines.right::after{bottom:1px;left:0;right:auto;width:88px}
+    .brand-logos{display:grid;grid-template-columns:1fr 1fr 1fr 1.2fr 1.1fr 1.2fr;align-items:center;gap:0;margin-bottom:35px}
+    .brand-logo{min-height:50px;display:flex;align-items:center;justify-content:center;padding:0 24px;border-right:1px solid rgba(255,255,255,.22)}
+    .brand-logo:last-child{border-right:0}.brand-logo img{max-height:42px;max-width:145px;object-fit:contain}
+    .view-all{height:48px;min-width:220px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--red);transform:skew(-12deg);font-family:"Barlow Condensed",sans-serif;font-size:18px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.view-all span{transform:skew(12deg)}
+
+    .about{min-height:340px;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.86)),url("assets/dark-texture.jpg") center/cover no-repeat;border-bottom:4px solid var(--red);padding:48px 0 44px}
+    .about-grid{display:grid;grid-template-columns:1.05fr 1.2fr;gap:60px;align-items:center}
+    .about-kicker{color:var(--red2);font-family:"Barlow Condensed",sans-serif;font-size:20px;font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px}
+    .about h2{font-family:"Barlow Condensed",sans-serif;font-size:47px;font-style:italic;font-weight:900;line-height:1.02;text-transform:uppercase;letter-spacing:.035em;margin-bottom:19px;text-shadow:4px 5px 0 rgba(0,0,0,.62)}
+    .small-red-line{width:52px;height:3px;background:var(--red);margin-bottom:18px}
+    .about p{color:#e4e4e7;max-width:430px;font-size:18px;line-height:1.55;margin-bottom:24px}
+    .learn{height:45px;width:235px;border:2px solid var(--red);display:inline-flex;align-items:center;justify-content:center;transform:skew(-11deg);font-family:"Barlow Condensed",sans-serif;font-size:17px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.learn span{transform:skew(11deg)}
+    .stats{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid rgba(255,255,255,.18);min-height:232px}
+    .stat{padding:24px 40px;border-right:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.14);min-height:116px}.stat:nth-child(2),.stat:nth-child(4){border-right:0}.stat:nth-child(3),.stat:nth-child(4){border-bottom:0}
+    .stat b{color:var(--red2);font-family:"Barlow Condensed",sans-serif;font-size:54px;line-height:.95;font-style:italic;font-weight:900;display:block}.stat span{font-family:"Barlow Condensed",sans-serif;font-size:21px;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.stat .stars{color:var(--red2);letter-spacing:.18em;font-size:23px;margin-top:10px}
+
+    .footer{background:linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.94)),url("assets/dark-texture.jpg") center/cover no-repeat;padding:48px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.45fr .7fr 1fr .9fr;gap:45px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.12)}
+    .footer-logo{width:300px;margin-top:12px}.footer h3{color:var(--red2);font-family:"Barlow Condensed",sans-serif;font-size:22px;font-style:italic;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:19px}.footer ul{list-style:none}.footer li,.footer p{font-size:17px;line-height:1.65;color:#eeeef1;font-weight:400}
+    .socials{display:flex;gap:16px;margin-top:26px}.social{width:40px;height:40px;border:1px solid rgba(255,255,255,.75);display:grid;place-items:center;border-radius:4px;font-weight:700;font-size:20px}.copyright{padding-top:18px;text-align:center;color:#cfcfd5;font-size:15px}
+
+    @media(max-width:1000px){
+      .container{width:min(var(--container), calc(100% - 36px))}.header{height:auto;padding:18px 0}.header-inner{align-items:flex-start}.logo-header{width:235px}.nav{display:none}.call-box{min-width:158px;height:56px}.call-text b{font-size:18px}.call-text small{font-size:13px}
+      .hero{height:auto;min-height:840px;padding-bottom:320px}.hero-logo{left:18px;top:65px;width:min(600px,90vw)}.hero-tire{right:-90px;top:300px;width:520px;opacity:.9}.hero-tagline{left:22px;top:374px;font-size:32px}.hero-actions{left:22px;top:500px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}.service:nth-child(2)::after{display:none}.brand-logos{grid-template-columns:repeat(3,1fr);row-gap:24px}.brand-logo:nth-child(3){border-right:0}.about-grid,.footer-grid{grid-template-columns:1fr}.stats{border-left:0}
+    }
+    @media(max-width:620px){
+      .container{width:min(var(--container), calc(100% - 26px))}.header-inner{align-items:center}.logo-header{width:190px}.call-box{display:none}.hero{min-height:760px;padding-bottom:260px}.hero-logo{top:55px;width:92vw}.hero-tire{top:370px;right:-160px;width:490px}.hero-tagline{top:315px;font-size:27px}.hero-actions{top:455px;flex-direction:column;gap:16px}.btn{width:195px}
+      .services-grid{grid-template-columns:1fr}.service::after{display:none!important}.brands h2{font-size:33px;gap:10px}.speed-lines{display:none}.brand-logos{grid-template-columns:repeat(2,1fr)}.brand-logo{border-right:0}.about h2{font-size:38px}.stats{grid-template-columns:1fr}.stat{border-right:0!important}.footer-logo{width:230px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#top"><img class="logo-header" src="assets/logo-header.png" alt="Migos Tires logo"></a>
+        <div class="nav-wrap">
+          <nav class="nav" aria-label="Main navigation">
+            <a class="active" href="#top">Home</a><a href="#services">Tires</a><a href="#services">Services</a><a href="#brands">Brands</a><a href="#about">About</a><a href="#contact">Contact</a>
+          </nav>
+          <a class="call-box" href="tel:4148282178"><span><span class="phone-icon">☎</span><span class="call-text"><b>Call Now</b><small>414-828-2178</small></span></span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <img class="hero-logo" src="assets/logo-hero.png" alt="Migos Tires logo">
+          <img class="hero-tire" src="assets/hero-tire.png" alt="Performance tire">
+          <div class="hero-tagline">Quality Tires. Fast Service.<br>Honest Prices.</div>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#services"><span><span class="tiny-icon">◎</span> Shop Tires</span></a>
+            <a class="btn btn-outline" href="#contact"><span><span class="tiny-icon">●</span> Our Location</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-row" id="services">
+        <div class="container"><div class="services-grid">
+          <article class="service"><img src="assets/icon-new-used.png" alt=""><h3>New & Used Tires</h3><div class="mini-line"></div><p>Top brands. All sizes. The right tire for every ride.</p></article>
+          <article class="service"><img src="assets/icon-installation.png" alt=""><h3>Installation</h3><div class="mini-line"></div><p>Mounted and balanced with precision and care.</p></article>
+          <article class="service"><img src="assets/icon-repair.png" alt=""><h3>Tire Repair</h3><div class="mini-line"></div><p>Punctures, plugs, patches and more. We get you rolling.</p></article>
+          <article class="service"><img src="assets/icon-balancing.png" alt=""><h3>Balancing</h3><div class="mini-line"></div><p>Smooth ride. Better handling. Longer tire life.</p></article>
+        </div></div>
+      </section>
+
+      <section class="brands" id="brands">
+        <div class="container">
+          <div class="brands-kicker">Top Brands</div>
+          <h2><span class="speed-lines left"></span> The Brands You Trust <span class="speed-lines right"></span></h2>
+          <div class="brand-logos">
+            <div class="brand-logo"><img src="assets/brand-michelin.png" alt="Michelin"></div>
+            <div class="brand-logo"><img src="assets/brand-bfgoodrich.png" alt="BFGoodrich"></div>
+            <div class="brand-logo"><img src="assets/brand-pirelli.png" alt="Pirelli"></div>
+            <div class="brand-logo"><img src="assets/brand-continental.png" alt="Continental Tires"></div>
+            <div class="brand-logo"><img src="assets/brand-toyo.png" alt="Toyo Tires"></div>
+            <div class="brand-logo"><img src="assets/brand-hankook.png" alt="Hankook"></div>
+          </div>
+          <a href="#contact" class="view-all"><span>View All Brands</span></a>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about-grid">
+          <div>
+            <div class="about-kicker">About Migos Tires</div>
+            <h2>Built on Quality.<br>Driven by Trust.</h2>
+            <div class="small-red-line"></div>
+            <p>We're more than just a tire shop. We're your neighbors. Our goal is simple: provide top quality tires and service with honesty, speed and pride.</p>
+            <a href="#contact" class="learn"><span>Learn More About Us</span></a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>1000+</b><span>Satisfied Customers</span></div>
+            <div class="stat"><b>10+</b><span>Years in Business</span></div>
+            <div class="stat"><b>100%</b><span>Quality Service</span></div>
+            <div class="stat"><b>5</b><span>Star Reviews</span><div class="stars">★★★★★</div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div><img class="footer-logo" src="assets/logo-footer.png" alt="Migos Tires logo"></div>
+          <div><h3>Quick Links</h3><ul><li><a href="#top">Home</a></li><li><a href="#services">Tires</a></li><li><a href="#services">Services</a></li><li><a href="#brands">Brands</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+          <div><h3>Contact Us</h3><ul><li>☎ 414-828-2178</li><li>☎ 414-628-1320</li><li>☎ 414-292-7597</li><li>● Milwaukee, WI</li><li>◴ Mon - Sat: 8AM - 6PM</li><li>Sunday: Closed</li></ul></div>
+          <div><h3>Follow Us</h3><div class="socials"><a class="social" href="#" aria-label="Facebook">f</a><a class="social" href="#" aria-label="Instagram">◎</a><a class="social" href="#" aria-label="TikTok">♪</a></div></div>
+        </div>
+        <div class="copyright">© 2026 Migos Tires. All Rights Reserved.</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
